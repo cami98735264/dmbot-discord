@@ -34,7 +34,7 @@ client.on('messageCreate', async (message) => {
                     negativeReactions++;
                 }
             })
-            collector.on('end', collected => {
+            collector.on('end', () => {
                 if(negativeReactions >= 4) {
                     message.channel.send("¡La encuesta ha sido rechazada!");
                 }
