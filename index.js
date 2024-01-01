@@ -25,7 +25,7 @@ client.on('messageCreate', async (message) => {
             };
             let negativeReactions = 0;
             let positiveReactions = 0;
-            const collector = msg.createReactionCollector({ filter: collectorFilter, time: 10000 });
+            const collector = msg.createReactionCollector({ filter: collectorFilter, time: 50000 });
             collector.on('collect', (reaction, user) => {
                 if(reaction.emoji.name === '✅') {
                     positiveReactions++;
